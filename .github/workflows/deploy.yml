@@ -25,7 +25,7 @@ jobs:
         if: ${{ github.event.inputs.status }}
         run: exit 0
       - name: Fail
-        if: ${{ !github.event.inputs.status }}
+        if: ${{ github.event.inputs.status == false }}
         run: exit 1
       - name: Build succeeded
         if: ${{ success() }}
