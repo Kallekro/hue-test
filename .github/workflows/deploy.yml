@@ -4,11 +4,8 @@ on:
   workflow_dispatch:
     inputs:
         name:
-          type: choice
-          description: Status
-          options:
-          - On
-          - Off
+          type: string
+          description: payload
   push:
     branches:
       - main
