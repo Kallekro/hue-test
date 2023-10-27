@@ -3,7 +3,7 @@ name: Deploy
 on:
   workflow_dispatch:
     inputs:
-      result:
+      status:
         type: boolean
     #inputs:
     #    payload:
