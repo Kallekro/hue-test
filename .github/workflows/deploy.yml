@@ -15,6 +15,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Connection test
         run:
+          chmod +x ./test.sh
           ./test.sh
 
         #curl -k --location 'https://192.168.119.93/clip/v2/resource/device' --header 'hue-application-key: NbW6sDPFjLA1QoLTMd5MRb9a-wzFZBghWXt8wXdb'
