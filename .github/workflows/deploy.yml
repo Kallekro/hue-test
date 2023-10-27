@@ -22,10 +22,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Succeed
-        if: ${{ github.event.inputs.result }}
+        if: ${{ github.event.inputs.status }}
         run: exit 0
       - name: Fail
-        if: ${{ github.event.inputs.result }}
+        if: ${{ github.event.inputs.status }}
         run: exit 1
       - name: Build succeeded
         if: ${{ success() }}
