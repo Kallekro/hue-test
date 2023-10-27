@@ -3,7 +3,7 @@ name: Deploy
 on:
   workflow_dispatch:
     inputs:
-        name:
+        payload:
           type: string
           description: payload
   push:
@@ -27,8 +27,6 @@ jobs:
           pip install -r requirements.txt
       - name: Connection test
         run: |
-          python test.py
-          #chmod +x ./test.sh
-          #./test.sh
+          python test.py ${{ github.event.inputs.payload }}
 
         #curl -k --location 'https://192.168.119.93/clip/v2/resource/device' --header 'hue-application-key: NbW6sDPFjLA1QoLTMd5MRb9a-wzFZBghWXt8wXdb'
