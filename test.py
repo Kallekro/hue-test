@@ -2,6 +2,7 @@ import requests
 import sys
 
 payload = sys.argv[1]
+print(payload)
 #payload = json.dumps({"on": True})
 
 url = 'https://api.meethue.com/bridge/KvZfKvjp4mefjSVg2J1WJv7nQZQ7jfDaaXlFfJ2e/lights/1/state'
