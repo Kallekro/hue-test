@@ -7,7 +7,7 @@ status = sys.argv[1]
 payload = json.dumps({
     "on": status == "On",
     "effect": "colorloop",
-    "bri": 60,
+    "bri": 100,
     "sat": 254
 })
 
