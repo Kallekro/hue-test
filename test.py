@@ -4,7 +4,12 @@ import json
 
 #payload = sys.argv[1]
 status = sys.argv[1]
-payload = json.dumps({"on": status == "On"})
+payload = json.dumps({
+    "on": status == "On",
+    "effect": "colorloop",
+    "bri": 60,
+    "sat": 254
+})
 
 url = 'https://api.meethue.com/bridge/KvZfKvjp4mefjSVg2J1WJv7nQZQ7jfDaaXlFfJ2e/lights/1/state'
 
